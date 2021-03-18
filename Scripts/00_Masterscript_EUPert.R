@@ -38,6 +38,10 @@ source(file = "Scripts/04_Create_complete_data.R")
 # This creates fig_RCDC_PT
 source(file = "Scripts/05_Visualize_RCDC_PT.R")
 
+# Visualize proportions of PT, Dt and TT
+# This creates fig_prop
+source(file = "Scripts/06_Visualize_proportions.R")
+
 #
 # GMCs
 #
@@ -45,11 +49,11 @@ source(file = "Scripts/05_Visualize_RCDC_PT.R")
 # Create GMC table
 # This creates eupert_gmc_data
 # It contains the GMCs, their corresponding 95% CIs and mutual comparisons
-source(file = "Scripts/06_Compare_GMCs.R")
+source(file = "Scripts/07_Compare_GMCs.R")
 
 # Visualize eupert_gmc_data PT
 # This creates fig_GMC_PT
-source(file = "Scripts/07_Visualize_GMCs_PT.R")
+source(file = "Scripts/08_Visualize_GMCs_PT.R")
 
 #
 # Seroprevalences
@@ -58,37 +62,37 @@ source(file = "Scripts/07_Visualize_GMCs_PT.R")
 # Set-up prevalence data
 # This creates eupert_prev_data
 # At this stage, it only contains numerator / denominator counts
-source(file = "Scripts/08_Create_prevalence_data.R")
+source(file = "Scripts/09_Create_prevalence_data.R")
 
 # Add prevalances and mutual comparisons
 # It contains the prevalences, their corresponding 95% CIs and mutual comparisons
 # Prevalences are calculated by:
 # - Binomial generalized linear modelling (All PT, except PT >= 100 and TT)
 # - Exact Binomial methods (PT >= 100 and TT, PT >= 100 by Monte Carlo simulation)
-source(file = "Scripts/09a_Compare_prevalences_PT_Dt.R")
-source(file = "Scripts/09b_Compare_prevalences_PT100.R")
-source(file = "Scripts/09c_Compare_prevalences_TT.R")
+source(file = "Scripts/10a_Compare_prevalences_PT_Dt.R")
+source(file = "Scripts/10b_Compare_prevalences_PT100.R")
+source(file = "Scripts/10c_Compare_prevalences_TT.R")
 # Print
 print(eupert_prev_data)
 
 # Visualize eupert_prev_data
 # This creates fig_prev
-source(file = "Scripts/10_Visualize_prevalences.R")
+source(file = "Scripts/11_Visualize_prevalences.R")
 
 # Test overall effect of Country, Age_group and Sex on seroprevalence
 # This creates table_overall_effects
-source(file = "Scripts/11_Test_overall_effects.R")
+source(file = "Scripts/12_Test_overall_effects.R")
 
 #
 # Export tables and figures
 #
 
-source(file = "Scripts/12_Export_tables.R")
-source(file = "Scripts/13_Export_figures.R")
+source(file = "Scripts/13_Export_tables.R")
+source(file = "Scripts/14_Export_figures.R")
 
 #
 # Extra analyses
 #
 
 # Sero incidence calculations PT
-source(file = "Scripts/14_Seroincidence_PT.R")
+source(file = "Scripts/15_Seroincidence_PT.R")
