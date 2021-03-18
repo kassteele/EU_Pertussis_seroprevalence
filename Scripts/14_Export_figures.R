@@ -1,18 +1,13 @@
-# Figure 3
-fig_RCDC_PT %>% ggsave(
-  filename = "Results/Figures/EUPert_Fig3_RCDC_PT.svg",
-  width = 7, height = 7)
-fig_RCDC_PT %>% ggsave(
-  filename = "Results/Figures/EUPert_Fig3_RCDC_PT.pdf",
-  width = 7, height = 7)
-
-# Figure S1
-fig_GMC_PT %>% ggsave(
-  filename = "Results/Figures/EUPert_FigS1_GMC_PT.svg",
-  width = 7, height = 7*sqrt(2))
-fig_GMC_PT %>% ggsave(
-  filename = "Results/Figures/EUPert_FigS1_GMC_PT.pdf",
-  width = 7, height = 7*sqrt(2))
+# Figure 1
+(fig_prop$PT + fig_prop$Dt + fig_prop$TT + plot_layout(nrow = 3, ncol = 1) + plot_annotation(tag_levels = "a")) %>%
+  ggsave(
+    file = "Results/Figures/EUPert_Fig1_prop.svg",
+    width = 7, height = 7*sqrt(2))
+(fig_prop$PT + fig_prop$Dt + fig_prop$TT + plot_layout(nrow = 3, ncol = 1) + plot_annotation(tag_levels = "a")) %>%
+  ggsave(
+    file = "Results/Figures/EUPert_Fig1_prop.pdf",
+    device = cairo_pdf,
+    width = 7, height = 7*sqrt(2))
 
 # Figure 2A
 fig_prev$`PT≥100` %>% ggsave(
@@ -41,3 +36,20 @@ fig_prev$`PT≥100` %>% ggsave(
   ggsave(
     file = "Results/Figures/EUPert_Fig2C_prev_TT.pdf",
     width = 7*2, height = 7*sqrt(2))
+
+# Figure 3
+fig_RCDC_PT %>% ggsave(
+  filename = "Results/Figures/EUPert_Fig3_RCDC_PT.svg",
+  width = 7, height = 7)
+fig_RCDC_PT %>% ggsave(
+  filename = "Results/Figures/EUPert_Fig3_RCDC_PT.pdf",
+  width = 7, height = 7)
+
+# Figure S1
+fig_GMC_PT %>% ggsave(
+  filename = "Results/Figures/EUPert_FigS1_GMC_PT.svg",
+  width = 7, height = 7*sqrt(2))
+fig_GMC_PT %>% ggsave(
+  filename = "Results/Figures/EUPert_FigS1_GMC_PT.pdf",
+  width = 7, height = 7*sqrt(2))
+
